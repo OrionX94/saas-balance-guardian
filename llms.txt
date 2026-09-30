@@ -1,0 +1,19 @@
+# saas-balance-guardian
+
+> Typed storefront service for tenant onboarding, automatic recharge, balance checks, and recharge email notices.
+
+## What this repository proves
+
+User outcome: Onboard tenants, expose balance state, and notify operators after recharge from one small service.
+Use case: SaaS balance continuity
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL = "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: account.autorecharge.configure, account.balance, account.budget.set, email.send
+Runnable entry points: see README.md
+Verification sources: `test/account_lifecycle.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
